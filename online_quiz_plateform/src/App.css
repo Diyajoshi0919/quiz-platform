@@ -1,0 +1,114 @@
+.login-container{
+  width:400px;
+  margin:100px auto;
+}
+.role-selector{
+    width:100%;
+    padding:18px 20px;
+    border-radius:13px;
+    border:1px solid rgba(50,125,240,0.65);
+    background:rgba(3,29,68,0.85);
+    box-sizing:border-box;
+    margin-bottom:24px;
+}
+
+.role-selector label{
+  display:block;
+  margin-bottom:10px;
+  font-size:17px;
+  font-weight:600;
+  color:#d7e5fa
+}
+.role-select{
+ width:100%;
+ padding: 16px 18px;
+ border-radius: 13px;
+ border: 1px solid rgba(50,125,240,0.65);
+ background:rgba(3,29,68,0.85);
+ color: white;
+ font-size:16px;
+ outline:none;
+ cursor:pointer;
+ box-sizing:border-box;
+}
+.role-select:focus{
+  border-color:#3691ff;
+  box-shadow: 0 0 0 3px rgba(54,145,255,0.15);
+}
+.role-select:hover{
+  border-color:#3691ff;
+  box-shadow: 0 0 0 3px rgba(54,145,255,0.15);
+}
+.input-field{
+  width:100%;
+  padding:16px 18px;
+  border-radius:13px;
+  border:1px solid rgba(50,125,240,0.65);
+  background:rgba(3,29,68,0.85);
+  color:white;
+  font-size:16px;
+  outline:none;
+  box-sizing:border-box;
+  margin-bottom:24px;
+}
+.input-field::placeholder{
+  color:#7187a8;
+}
+.input-field:focus{
+  border-color:#3691ff;
+  box-shadow: 0 0 0 3px rgba(54,145,255,0.15);
+}
+.input-class{
+  text-align:center;
+  width:100%;
+}
+.platform-heading{
+  width:100%;
+  text-align:center;
+}
+.institute-name{
+  width:100%;
+  text-align:center;
+}
+.form-group{
+  margin-bottom:24px;
+}
+.form-group label{
+  display:block;
+  margin-bottom:9px;
+  font-size:17px;
+  font-weight:500;
+  color:#d7e5fa
+}
+.login-button{
+  width:100%;
+  padding:16px;
+  border-radius:13px;
+  border:none;
+  background: linear-gradient(90deg,#1769e8,#2589ff);
+  color:white;
+  font-size:18px;
+  font-weight:600;
+  cursor:pointer;
+  transition: transform 0.2s ease,box-shadow 0.2s ease;
+  margin-top:12px;
+  margin-bottom:12px;
+}
+.login-button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(20,110,240,0.35);
+}
+.institute-name{
+  font-size:24px;
+  font-weight:700;
+  color:#d7e5fa;
+  margin-bottom:24px;
+  position:absolute;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:max-content;
+  color:#dceaff;
+  white-space:nowrap;
+  letter-spacing:0.5px;
+}
