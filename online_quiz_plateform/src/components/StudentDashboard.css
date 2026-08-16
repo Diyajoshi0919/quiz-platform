@@ -1,0 +1,687 @@
+* {
+    box-sizing: border-box;
+}
+
+.student-dashboard {
+    min-height: 100vh;
+    display: flex;
+    background: #f7f7fc;
+    color: #15152d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 255px;
+    min-height: 100vh;
+    background: #111127;
+    color: white;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 45px;
+}
+
+.logo:first-letter {
+    font-size: 27px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item {
+    padding: 14px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #c8c8d8;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.nav-item span {
+    width: 20px;
+    text-align: center;
+}
+
+.nav-item:hover {
+    background: #29294c;
+    color: white;
+}
+
+.nav-item.active {
+    background: linear-gradient(90deg, #6536e8, #7c45f5);
+    color: white;
+}
+
+.learning-card {
+    margin-top: auto;
+    background: linear-gradient(145deg, #282451, #33246d);
+    border-radius: 18px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.learning-card h3 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.learning-card p {
+    font-size: 12px;
+    color: #c8c6dc;
+}
+
+.trophy {
+    text-align: right;
+    font-size: 35px;
+}
+
+.theme-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #242442;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* ================= MAIN ================= */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.topbar {
+    height: 78px;
+    background: white;
+    border-bottom: 1px solid #eeeeF5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+}
+
+.menu-button {
+    border: none;
+    background: transparent;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.notification {
+    position: relative;
+    font-size: 22px;
+}
+
+.notification span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #6337e8;
+    color: white;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #7040ed;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.profile strong {
+    display: block;
+    font-size: 14px;
+}
+
+.profile small {
+    color: #77778c;
+}
+
+
+/* ================= CONTENT ================= */
+
+.content-area {
+    padding: 30px 32px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.welcome-section {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.welcome-section h1 {
+    margin: 0 0 8px;
+    font-size: 27px;
+}
+
+.welcome-section p {
+    margin: 0;
+    color: #77778c;
+}
+
+.welcome-icon {
+    font-size: 65px;
+    margin-right: 30px;
+}
+
+
+/* ================= STAT CARDS ================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 18px rgba(30, 30, 70, 0.04);
+}
+
+.stat-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.stat-icon.purple {
+    background: #eee8ff;
+}
+
+.stat-icon.green {
+    background: #e4f8ec;
+    color: #20a45a;
+}
+
+.stat-icon.yellow {
+    background: #fff4dc;
+}
+
+.stat-icon.blue {
+    background: #e7f0ff;
+}
+
+.stat-card h2 {
+    margin: 0;
+    font-size: 23px;
+}
+
+.stat-card p {
+    margin: 5px 0 2px;
+    color: #6337e8;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.stat-card small {
+    color: #88889b;
+}
+
+
+/* ================= TWO COLUMN ================= */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(300px, 0.9fr);
+    gap: 22px;
+}
+
+.quiz-section,
+.side-card,
+.motivation-card {
+    background: white;
+    border-radius: 18px;
+    padding: 22px;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 21px;
+}
+
+
+/* ================= FILTERS ================= */
+
+.filters {
+    display: flex;
+    gap: 9px;
+    margin: 20px 0;
+}
+
+.filter {
+    padding: 9px 18px;
+    border: 1px solid #e2e2ed;
+    background: white;
+    border-radius: 8px;
+    color: #66667a;
+    cursor: pointer;
+}
+
+.active-filter {
+    background: #6337e8;
+    border-color: #6337e8;
+    color: white;
+}
+
+
+/* ================= QUIZ CARD ================= */
+
+.quiz-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quiz-card {
+    border: 1px solid #e7e7ef;
+    border-radius: 14px;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    transition: 0.2s;
+}
+
+.quiz-card:hover {
+    box-shadow: 0 5px 18px rgba(50, 40, 100, 0.08);
+    transform: translateY(-1px);
+}
+
+.quiz-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 14px;
+    background: #eee8ff;
+    color: #6337e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.quiz-info {
+    flex: 1;
+}
+
+.quiz-info h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.quiz-details {
+    display: flex;
+    gap: 15px;
+    color: #707085;
+    font-size: 12px;
+    flex-wrap: wrap;
+}
+
+.duration {
+    background: #f0ebff;
+    color: #6337e8;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.subject {
+    display: inline-block;
+    margin-top: 9px;
+    padding: 4px 9px;
+    border-radius: 6px;
+    background: #f0ebff;
+    color: #6337e8;
+    font-size: 11px;
+}
+
+.quiz-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.status,
+.upcoming-status {
+    background: #e7f8e9;
+    color: #169344;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.quiz-action button {
+    border: none;
+    background: #6337e8;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.quiz-action button:hover {
+    background: #5126d1;
+}
+
+.view-all {
+    display: block;
+    margin: 20px auto 0;
+    padding: 11px 20px;
+    border: 1px solid #ddd9eb;
+    background: white;
+    color: #6337e8;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* ================= RIGHT COLUMN ================= */
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.side-card-header h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.side-card-header a {
+    color: #6337e8;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.upcoming-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upcoming-item {
+    border: 1px solid #ededf3;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-box {
+    width: 45px;
+    height: 50px;
+    border-radius: 9px;
+    background: #f0ebff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #6337e8;
+}
+
+.date-box strong {
+    font-size: 17px;
+}
+
+.date-box small {
+    font-size: 9px;
+}
+
+.upcoming-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.upcoming-info strong {
+    display: block;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.upcoming-info p {
+    margin: 5px 0 0;
+    color: #88889b;
+    font-size: 10px;
+}
+
+.upcoming-status {
+    font-size: 9px;
+}
+
+
+/* ================= RESULTS ================= */
+
+.result-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eeeeF4;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.green-result {
+    background: #e4f8ec;
+    color: #20a45a;
+}
+
+.blue-result {
+    background: #e7f0ff;
+}
+
+.yellow-result {
+    background: #fff3d8;
+}
+
+.result-item > div:nth-child(2) {
+    flex: 1;
+}
+
+.result-item strong {
+    display: block;
+    font-size: 12px;
+}
+
+.result-item p {
+    margin: 5px 0 0;
+    font-size: 10px;
+    color: #88889b;
+}
+
+.score {
+    padding: 5px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.green-score {
+    background: #e5f8ea;
+    color: #179345;
+}
+
+.blue-score {
+    background: #e7f0ff;
+    color: #2770d7;
+}
+
+
+/* ================= MOTIVATION ================= */
+
+.motivation-card {
+    min-height: 130px;
+    background: linear-gradient(135deg, #f4f0ff, #ffffff);
+    position: relative;
+    overflow: hidden;
+}
+
+.quote {
+    font-size: 40px;
+    color: #9b78f2;
+}
+
+.motivation-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.graduation {
+    position: absolute;
+    right: 25px;
+    bottom: 15px;
+    font-size: 50px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .right-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .motivation-card {
+        grid-column: span 2;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .content-area {
+        padding: 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quiz-action {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .right-column {
+        display: flex;
+    }
+
+    .welcome-section {
+        padding: 20px;
+    }
+
+    .welcome-icon {
+        display: none;
+    }
+}
